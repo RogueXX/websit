@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace okcopy.Areas.API
+namespace Mor.Areas.API
 {
     public class APIAreaRegistration : AreaRegistration
     {
