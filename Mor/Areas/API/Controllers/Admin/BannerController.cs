@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Mor.Controllers
+namespace Mor.Areas.API.Controllers
 {
-    public class HomeController : Controller
+    public class BannerController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /API/Banner/
 
         public ActionResult Index()
         {

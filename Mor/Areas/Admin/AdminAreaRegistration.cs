@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace okcopy.Areas.Admin
+namespace Mor.Areas.Admin
 {
     public class AdminAreaRegistration : AreaRegistration
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace okcopy.Areas.API.Controllers
+namespace Mor.Areas.API.Controllers
 {
     public class SiteController : Controller
     {
