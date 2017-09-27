@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mor.Common
 {
-    [Serializable]   
+    [Serializable]
     public class MenuModel
     {
         /// <summary>

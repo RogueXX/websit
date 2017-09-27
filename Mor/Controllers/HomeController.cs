@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace Mor.Controllers
 {
     public class HomeController : Controller
-    {
+    { 
         //
         // GET: /Home/
 
