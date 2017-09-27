@@ -30,20 +30,18 @@ namespace Mor
                 "~/Scripts/bootstrap-prompts-alert.js",
                 "~/Scripts/require.js",
                 "~/Scripts/knockout.components.js"
-                //,"~/Scripts/common.js"
+                ,"~/Scripts/common.js"
                 ));
               
             // 页面样式
             bundles.Add(new StyleBundle("~/bundles/css").Include(
-                "~/Content/bootstrap.min.css",
-                "~/content/css/bootstrap/bootstrap-theme.css",
-                "~/content/css/bootstrap/bootstrap-overrides.css",
-
-                "~/content/css/compiled/layout.css",
-                "~/content/css/compiled/elements.css",
-                "~/content/css/compiled/table.css",
-                //  "~/content/css/compiled/icons.css",
-                "~/content/css/lib/bootstrap.datepicker.css",
+                "~/Content/bootstrap.css", 
+                "~/Content/css/bootstrap/bootstrap-theme.css",
+                "~/Content/css/bootstrap/bootstrap-overrides.css", 
+                "~/Content/css/compiled/layout.css",
+                "~/Content/css/compiled/elements.css",
+                "~/Content/css/compiled/table.css", 
+                "~/Content/css/lib/bootstrap.datepicker.css",
                 "~/Content/font-awesome.min.css",
                 "~/Content/site.css"
                 )
