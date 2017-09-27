@@ -45,11 +45,11 @@
     <Compile Include="Helpers\Filler.cs" />
     <Compile Include="Helpers\Guider.cs" />
     <Compile Include="Helpers\MD5er.cs" />
+    <Compile Include="Model\MenuModel.cs" />
+    <Compile Include="Model\UserInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

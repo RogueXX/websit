@@ -126,7 +126,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\MainController.cs" />
     <Compile Include="Areas\API\APIAreaRegistration.cs" />
+    <Compile Include="Areas\API\Controllers\AdminController.cs" />
     <Compile Include="Areas\API\Controllers\SiteController.cs" />
     <Compile Include="Areas\Site\Controllers\IndexController.cs" />
     <Compile Include="Areas\Site\SiteAreaRegistration.cs" />
@@ -1402,8 +1405,11 @@
     <Content Include="Content\css\fonts\ratchicons.woff" />
     <Content Include="Areas\Site\Views\Web.config" />
     <Content Include="Areas\Site\Views\Index\Index.cshtml" />
-    <Content Include="Areas\Site\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Site\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
@@ -1435,8 +1441,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\API\Models\" />
     <Folder Include="Areas\Site\Models\" />
+    <Folder Include="Areas\Site\Views\Shared\" />
     <Folder Include="Content\ace\mustache\app\views\pages\partials\_shared\" />
     <Folder Include="Content\ace\mustache\php\_cache\" />
     <Folder Include="Models\" />

@@ -52,7 +52,7 @@ namespace Mor.DataAccess
             var sr = new System.Configuration.AppSettingsReader();
 
             var str = sr.GetValue("mssql", typeof(string)) as String;
-            if (str == null) throw new Exception("缺少mssql:ecms连接字符窜");
+            if (str == null) throw new Exception("缺少mssql:Mor连接字符窜");
 
             return CreateConnection(DbContextType.MSSql, str);
         }

@@ -1,0 +1,404 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="row" style="margin-top:50px;">
+    <form role="form" data-bind="with:queryParam,submit:search">
+        <div class="navbar-form">
+            <div class="form-group">
+                <input class="form-control input-sm" type="text" data-bind="value:Keyword" placeholder="输入商户名称..." />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success btn-sm" data-loading-text="请稍等...">
+                    <i class="fa fa-search"></i>
+                    查询
+                </button>
+                <button class="btn btn-info btn-sm" type="button" data-bind="click:$root.Add">
+                    <i class="fa fa-plus"></i>
+                    新增
+                </button>
+                <button class="btn btn-danger btn-sm" type="button" data-bind="click:$root.delSelectRows,enable:$root.selectRows().length>0">
+                    <i class="fa fa-trash-o"></i>
+                    批量删除
+                </button>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12">
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th style="width:50px;">
+                        <label><input type="checkbox" data-bind="checked:checkedAll,click:$root.changeState" />选择</label>
+                    </th>
+                    <th>商户编号</th>
+                    <th>商户名称</th>
+                    <th>用户组</th>
+                    <th>电话</th>
+                    <th>QQ号</th>
+                    <th>电子邮箱</th>
+                    <th>公司名称</th>
+                    <th>创建日期</th>
+                    <th style="width: 120px;" class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach:data">
+                <tr>
+                    <td class="text-center">
+                        <input data-bind="value:id, checked:$root.checkedAll(),click:$root.changeState" name="UserId" type="checkbox" />
+                    </td>
+                    @*id,username,email,telphone,qq,company,createtime*@
+                    <td><span data-bind="text:id"></span></td>
+                    <td><span data-bind="text:username"></span></td>
+                    <td><span data-bind="text:$root.GetGName(gid)"></span></td>
+                    <td><span data-bind="text:telphone"></span></td>
+                    <td><span data-bind="text:qq"></span></td>
+                    <td><span data-bind="text:email"></span></td>
+                    <td><span data-bind="text:company"></span></td>
+                    <td><span data-bind="text:createtime"></span></td>
+                    <td class="text-center">
+                        <a href="#" class="btn btn-link btn-xs" data-bind="click:$root.delRow"><i class="fa fa-trash-o"></i> 删除</a>
+                        <a href="#" class="btn btn-link btn-xs" data-bind="click:$root.editRow"><i class="fa fa-edit"></i> 编辑</a>
+                        @*<a href="#" class="btn btn-link btn-xs" data-bind="click:$root.editCates"><i class="fa fa-link"></i> 绑定商品类目</a>*@
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--ko if:data().length==0-->
+        <p class="text-center">没有匹配的记录！</p>
+        <!--/ko-->
+        <div id="pager1"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="editMember">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" data-bind="text:isEdit?'编辑商户信息':'新增商户'"></h4>
+            </div>
+            <div class="modal-body " data-bind="with:$root.currentUser">
+                <form role="form" class="form-horizontal">
+                    <div class="form-group ">
+                        <label class="control-label col-md-3 text-danger">商户名称：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control " data-bind="value:username" />
+                        </div>
+                    </div>
+                    <div class="form-group " data-bind="visible:$root.isEdit">
+                        <label class="control-label col-md-3  text-danger">登录密码：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control " data-bind="value:password" />
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label col-md-3">用户组：</label>
+                        <div class="col-md-5">
+                            <select class="form-control input-sm " data-bind="options:$root.Groups,  optionsText:'name', optionsValue:'id',value:gid"></select>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label col-md-3 text-danger">电话号码：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control input-sm" data-bind="value:telphone" />
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label col-md-3">QQ：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control " data-bind="value:qq" />
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label col-md-3 text-danger">电子邮箱：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control " data-bind="value:email" />
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label class="control-label col-md-3">公司名称：</label>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control " data-bind="value:company" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bind="click:save">
+                    <i class="fa fa-save"></i>
+                    <span data-bind="text:$root.isEdit?'更新': '保存并新增'"></span>
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-times-circle"></i>
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="AddCates">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">为商户绑定商品类目</h4>
+            </div>
+            <div class="modal-body " data-bind="with:$root.currentCates">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <label>
+                            @*<input type="checkbox" id="checkall" data-bind="checked:$root.chkdall(),click:$root.cliChek  " />*@
+                            <a href="#" data-bind="click:$root.cliChek  ">全选</a>&nbsp;
+                            <a href="#" data-bind="click:$root.cliUnChek  ">取消全选</a>
+                        </label>
+                    </div>
+                    <div class="panel-body">
+                        <div style="height:400px;overflow:auto;">
+                            <!--ko if: $root.currentCates().length==0-->
+                            <p class="text-muted text-center">没有类目！</p>
+                            <!--/ko-->
+                            <ul data-bind="foreach:$root.currentCates">
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="Cates_Path" data-bind="checked:chk,value:Path" />
+                                            <span data-bind="text:Name"></span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bind="click:saveCates">
+                    <i class="fa fa-save"></i>
+                    保存
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <i class="fa fa-times-circle"></i>
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/paginator.js"></script>
+
+<script type="text/javascript">
+
+    var userModel = function () {
+        //username, gid, password, email, telphone, qq, company
+        var m = this;
+        m.id = ko.observable(0);
+        m.username = ko.observable();
+        m.gid = ko.observable();
+        m.password = ko.observable();
+        m.email = ko.observable('');
+        m.telphone = ko.observable('');
+        m.qq = ko.observable('');
+        m.company = ko.observable('');
+    }
+
+    var viewModel = function () {
+
+        var self = this, pager1 = null;
+
+        self.queryParam = ko.observable({
+            Keyword: null
+        });
+
+        self.data = ko.observableArray();
+        //用户组
+        self.Groups = ko.observableArray();
+
+        self.GetGName = function (d) {
+            var gname = '';
+            self.Groups().forEach(function (r) {
+                if (r.id === d) {
+                    gname = r.name;
+                };
+            });
+            return gname;
+        }
+
+        self.checkedAll = ko.observable(false);
+
+        self.changeState = function () {
+            var arr = $.map($('[name="UserId"]:checked').toArray(), function (o) { return o.value; });
+            self.selectRows(arr);
+            return true;
+        }
+
+        self.selectRows = ko.observableArray([]);
+
+        self.delSelectRows = function () {
+
+            confirm('确定要删除已选中的商户吗？', function (sure) {
+                var str = self.selectRows().join(',');
+                sure && $.post('../Main/delete', { uid: str }, function () {
+                    pager.reload();
+                });
+            });
+        }
+
+        // 删除选中的行
+        self.delRow = function (d) {
+
+            confirm('确定要删除该商户吗？', function (sure) {
+                sure && $.post('../Main/delete', { uid: d.id }, function () {
+                    pager.requestData();
+                });
+            });
+        }
+        self.currentUser = ko.observable();
+        self.isEdit = ko.observable(1);
+        //编辑
+        self.editRow = function (d) {
+            self.isEdit(0);
+            var m = new userModel();
+            m.id(d.id);
+            m.username(d.username);
+            m.gid(d.gid);
+            m.password(d.password);
+            m.email(d.email);
+            m.telphone(d.telphone);
+            m.qq(d.qq);
+            m.company(d.company);
+
+            self.currentUser(m);
+            $('#editMember').modal('show');
+        }
+        //新增
+        self.Add = function () {
+            self.isEdit(1);
+            $('#editMember').modal('show');
+            self.currentUser(new userModel());
+        }
+
+        self.save = function () {
+            console.log(self.currentUser().username());
+            if (!self.currentUser().username()) {
+                alert("商户名称不能为空！");
+                return;
+            }
+            if (!self.currentUser().password()) {
+                alert("登录密码不能为空！");
+                return;
+            }
+            //vilidate
+            if (!self.vilidateTel(self.currentUser().telphone())) {
+                $.dialog.error('电话号码格式错误！请重新输入....');
+                return;
+            }
+            if (self.currentUser().qq() && !self.vilidateQQ(self.currentUser().qq())) {
+                $.dialog.error('QQ号格式错误！请重新输入....');
+                return;
+            }
+            if (!self.vilidateEmail(self.currentUser().email())) {
+                $.dialog.error('邮箱地址格式错误！请重新输入....');
+                return;
+            }
+
+            //return;
+            $.post('../Main/Save', self.currentUser(), function (res) {
+                if (res.status === -1) {
+                    $.dialog.error(res.msg)
+                } else {
+                    $.dialog.success("保存成功！", function () {
+                        $('#editMember').modal('hide');
+                        pager.requestData();
+                    })
+                }
+            })
+
+        }
+        //验证电话号码
+        self.vilidateTel = function (tel) {
+            var reg = /^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/;
+            return reg.test(tel);
+        }
+        //验证邮箱
+        self.vilidateEmail = function (Email) {
+            var regEmail = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            return regEmail.test(Email);
+        }
+        //验证QQ
+        self.vilidateQQ = function (qq) {
+            var regqq = /^[1-9]\d{4,10}$/;
+            return regqq.test(qq);
+        }
+
+        self.currentUid = ko.observable();
+        self.currentCates = ko.observableArray();
+        self.editCates = function (d) {
+            $('#AddCates').modal('show');
+            $.post('../Categrories/QueryPCates', { uid: d.id }, function (res) {
+                self.currentUid(d.id);
+                self.currentCates(res);
+            })
+        }
+
+        self.cliChek = function () {
+            $('[name="Cates_Path"]').each(function () {
+                $(this).prop("checked", true);
+            })
+            //self.currentCates().forEach(function (o) { o.chk=1; })
+        }
+        self.cliUnChek = function () {
+            $('[name="Cates_Path"]:checked').each(function () {
+                //$(this).removeAttr("checked");
+                $(this).prop("checked", false);
+            })
+        }
+
+        self.saveCates = function () {
+            var arr = $('[name="Cates_Path"]:checked').map(function () { return this.value; }).toArray();
+            var d = { paths: arr.join(','), uid: self.currentUid() };
+            $.post('../Categrories/SaveUCates', d, function (res) {
+
+                $.dialog.success("保存成功！", function () {
+                    $('#AddCates').modal('hide');
+                })
+            })
+
+        }
+
+
+        self.search = function () {
+            pager.reload();
+        }
+
+        self.init = function () {
+
+            //
+            pager = $('#pager1').paginator({
+                pageSize: 10,
+                ajaxUrl: '../Main/GetusersBypage',
+                ajaxParams: function () {
+                    return self.queryParam();
+                },
+                callback: function (result) {
+                    self.data(result.data);
+                    self.changeState();
+                }
+            });
+
+            $.post('../Privilege/Getusergroups', null, function (res) {
+                self.Groups(res);
+            })
+
+        };
+
+       // self.init();
+
+    }
+
+    ko.applyBindings(new viewModel());
+</script>

@@ -1,17 +1,216 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
     @Styles.Render("~/bundles/css")
-    @Scripts.Render("~/bundles/jQuery")
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/common")
+
+    @{
+
+        string token = Request["token"];
+        List<Mor.Common.MenuModel> menus = null;
+
+    //if (!string.IsNullOrEmpty(token) && Mor.Common.UserEnvironment.AdminMenus.ContainsKey(token))
+    //{
+    //    menus = Mor.Common.UserEnvironment.AdminMenus[token];
+    //}
+    }
+
 </head>
 <body>
-    @RenderBody()
+    <header class="navbar navbar-inverse  navbar-fixed-top" role="banner">
 
-    @Scripts.Render("~/bundles/jquery")
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Mor</a>
+        </div>
+
+        <nav class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-right navbar-nav">
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fa fa-user"></i>
+                       test1 <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropup">
+                        @if (0 == 0)
+                        {
+                            <li>
+                                <a href="/Apps/Settings/Users"> <i class="fa fa-users fa-fw"></i> 子账户管理</a>
+                            </li>
+                        }
+                        <li>
+                            <a href="/apps/user/profile"><i class="fa fa-edit fa-fw"></i> 商户信息  </a>
+                        </li>
+                        <li>
+                            <a href="/apps/user/changepassword"> <i class="fa fa-lock fa-fw"></i> 修改密码  </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/"> <i class="fa fa-wechat fa-fw"></i> 公众账号管理</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/login?act=logout"><span class="fa fa-power-off fa-fw"></span> 退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav">
+
+                @if (menus != null)
+                {
+                    <li @(ViewBag.FirstLevelId == null ? " class=active" : "")>
+                        <a href="~/apps/account?token=@Request["token"]">
+                            <i class="fa fa-dashboard fa-fw"></i>
+                            <span class="menu-text"> 仪表盘 </span>
+                        </a>
+                    </li>
+                    foreach (var menu in menus)
+                    {
+                        var childs = menus.FindAll(m => m.menu_pid == menu.menu_id);
+                        if (childs == null || childs.Count == 0) { continue; }
+
+                        <li @(menu.menu_id == ViewBag.FirstLevelId ? " class=active" : "")>
+                            <a href="@(childs[0].menu_url)?token=@Request["token"]">@menu.menu_name</a>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <li class="active">
+                        <a href="/">管理平台</a>
+                    </li>
+                    <li>
+                        <a href="#">功能介绍</a>
+                    </li>
+                    <li>
+                        <a href="#">帮助中心</a>
+                    </li>
+                }
+
+            </ul>
+        </nav>
+    </header>
+
+    @*@Html.Partial("~/Views/Shared/_Navbar.cshtml")*@
+
+    @if (menus == null)
+    {
+        var list = new List<object>();
+        list.Add(new { name = "公众账号管理", icon = "fa fa-wechat", url = "/", id = "1" });
+        if (0 == 0)
+        {
+            list.Add(new { name = "子账户管理", icon = "fa fa-users", url = "/Apps/Settings/Users", id = "2" });
+        }
+        list.Add(new { name = "商户信息", icon = "fa fa-edit", url = "/Apps/User/profile", id = "3" });
+        list.Add(new { name = "修改密码", icon = "fa fa-lock", url = "/Apps/User/changepassword", id = "4" });
+
+        <div id="sidebar-nav">
+            <ul id="dashboard-menu">
+                @foreach (dynamic obj in list)
+                {
+                    <li @(obj.id == ViewBag.SecondLevelId ? " class=active" : "")>
+
+                        @if (obj.id == ViewBag.SecondLevelId)
+                        {
+                            <div class="pointer">
+                                <div class="arrow"></div>
+                                <div class="arrow_border"></div>
+                            </div>
+                        }
+                        <a href="@obj.url">
+                            <i class="@obj.icon"></i>
+                            <span>@obj.name</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+
+    }
+    else if (ViewBag.SecondLevelId != null)
+    {
+        <div id="sidebar-nav">
+            <ul id="dashboard-menu">
+                @{
+        var pid = ViewBag.FirstLevelId;
+        var childs = menus.FindAll(m => m.menu_pid == pid);
+
+        foreach (var submenu in childs)
+        {
+            var url = submenu.menu_url;
+            url += submenu.menu_url.IndexOf('?') > 0 ? "&" : "?";
+            url += "token=" + Request.QueryString["token"];
+            <li @(submenu.menu_id == ViewBag.SecondLevelId ? " class=active" : "")>
+                @if (submenu.menu_id == ViewBag.SecondLevelId)
+                {
+                    <div class="pointer">
+                        <div class="arrow"></div>
+                        <div class="arrow_border"></div>
+                    </div>
+                }
+                <a href="@url">
+                    <i class="fa @submenu.menu_icon"></i>
+                    <span>@submenu.menu_name</span>
+                </a>
+            </li>
+        }
+                }
+
+            </ul>
+        </div>
+    }
+
+    <div class="content @(ViewBag.SecondLevelId != null ? "" : " wide-content")">
+        <div id="pad-wrapper">
+            <div class="page-header">
+                <!--#render header-->
+                @if (ViewBag.Title != null)
+                {
+                    <h3>
+                        @if (ViewBag.AccountName != null)
+                        {
+                            <small class="pull-right">
+                                <label class="label label-warning">@ViewBag.AccountName</label>
+                            </small>
+                        }
+
+                        <i class="fa @(ViewBag.IconCls??"fa-edit")"></i>
+                        @(ViewBag.Title ?? "")
+                        @if (ViewBag.Desc != null)
+                        {
+                            <small>
+                                <i class="fa fa-angle-double-right"></i>
+                                @ViewBag.Desc
+                            </small>
+                        }
+                    </h3>
+                }
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+    <hr />
+    <footer>
+        <p class="text-center">
+            <small>Copyright &copy; @DateTime.Now.Year - <a href="#" target="_blank">DAWSOFT</a> All Rights Reserved</small>
+        </p>
+    </footer>
+
+    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

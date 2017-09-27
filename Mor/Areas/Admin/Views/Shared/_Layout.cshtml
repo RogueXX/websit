@@ -1,0 +1,93 @@
+﻿@{
+    var aname = "Admin"; // Mor.Common.SessionHelper.Get<string>("AdminInfo");
+}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<title>@ViewBag.Title - @Mor.Common.UserEnvironment.ApplicationName</title>*@
+    <title>@ViewBag.Title </title>
+    @Styles.Render("~/bundles/css")
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/common")
+</head>
+
+<body>
+    <div id="loading_mask" class="loading" style="display: none;"><i class="fa fa-4x fa-spinner fa-spin"></i></div>
+    <header class="navbar navbar-inverse  navbar-fixed-top" role="banner">
+
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../adminlogin/index">O2O后台管理平台</a>
+        </div>
+        <nav class="collapse navbar-collapse" role="navigation">
+            <div class="nav navbar-right navbar-nav">
+                <a class="navbar-brand">@aname</a>
+                <a class="navbar-brand" href="../adminlogin/loginout">退出</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+
+                <li class="active">
+                    <a href="../main/index">管理平台</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    @{
+        var list = new List<object>();
+        list.Add(new { name = "商户管理", icon = "fa fa-wechat", url = "../Main/", id = "1" });
+        list.Add(new { name = "公众号管理", icon = "fa fa-wechat", url = "../Account/", id = "10" });
+        list.Add(new { name = "菜单权限管理", icon = "fa fa-lock", url = "../Privilege/", id = "2" });
+        list.Add(new { name = "菜单管理", icon = "fa fa-users", url = "../Menus/", id = "4" });
+
+        <div id="sidebar-nav">
+            <ul id="dashboard-menu">
+                @foreach (dynamic obj in list)
+                {
+                    <li @(obj.id == ViewBag.SecondLevelId ? " class=active" : "")>
+
+                        @if (obj.id == ViewBag.SecondLevelId)
+                        {
+                            <div class="pointer">
+                                <div class="arrow"></div>
+                                <div class="arrow_border"></div>
+                            </div>
+                        }
+                        <a href="@obj.url">
+                            <i class="@obj.icon"></i>
+                            <span>@obj.name</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+
+    }
+    <div class="content ">
+        <div id="pad-wrapper">
+            @RenderBody()
+        </div>
+    </div>
+
+    <hr>
+    <footer>
+        <p class="text-center">
+            <small>Copyright © 2015 - <a href="#" target="_blank">DAWSOFT</a> All Rights Reserved</small>
+        </p>
+    </footer>
+
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Content/js/theme.js"></script>
+    <script src="/Scripts/respond.min.js"></script>
+
+</body>
+</html>
