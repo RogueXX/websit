@@ -1,0 +1,168 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+a, img {
+    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+}
+/*header*/
+.bar {
+position: fixed;
+right: 0;
+left: 0;
+z-index: 10;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+.bar-nav {
+top: 0;
+}
+.img-responsive{display: block;
+  width: 100%;
+  height: auto;}
+/*酒店展示*/
+.content{margin-top: 118px;}
+.room-type{position: relative; width: 100%; text-align: center;}
+.room-type h1{position: absolute; top: 40px; width: 100%;}
+.title{font-family: "微软雅黑"; font-size: 20px;}
+.slide-box{ position: absolute; bottom: 10px; width: 100%;}
+.icon-top{width: 40px;}
+.margin-box{ margin-bottom: 30px; display: block;}
+/*餐饮预订*/
+.subheader-nav{ background: #757575; height: 44px; color: #fff; position: relative;}
+.icon_arrow_left {
+position: absolute;
+top: 0px;
+left: 0px;
+background: url(../images/pre.png) no-repeat center center;
+display: block;
+width: 50px;
+height: 44px;
+text-indent: -9999px;
+margin: 0;
+padding: 0;
+background-size: 24px auto;
+}
+.icon_arrow_menu {
+position: absolute;
+top: 0px;
+right: 0px;
+background: url(../images/home.png) no-repeat center center;
+display: block;
+width: 50px;
+height: 44px;
+text-indent: -9999px;
+margin: 0;
+padding: 0;
+background-size: 24px auto;
+}
+.sub-title{position: absolute;
+display: block;
+width: 100%;
+padding: 0;
+margin: 0 -10px;
+font-size: 17px;
+font-weight: 500;
+line-height: 44px;
+color: #fff;
+text-align: center;
+white-space: nowrap;}
+.form-box{margin: 20px 5px;font-size: 12px;}
+.border-radius{border-radius: 5px; border:1px solid #CDCDCD;padding: 10px 10px 0px;margin-bottom: 25px;}
+.text-title{ background: #F6F6F6; border-bottom: 1px solid #CDCDCD; padding-bottom: 5px;line-height: 24px;
+padding-left: 10px;}
+/*表单*/
+.btn-block {
+display: block;
+width: 100%;
+padding: 10px 0;
+margin-bottom: 10px;
+font-size: 16px;
+}
+.input-row label,.textarea-row label {
+float: left;
+width: 20%;
+padding: 8px 15px;
+font-family: "Helvetica Neue",Helvetica,sans-serif;
+line-height: 1.1;
+font-size:12px;
+}
+.textarea-row{height: 60px;
+display: block;padding-top: 10px;padding-bottom: 10px;}
+.input-row {
+height: 30px;
+line-height:30px;
+padding-top: 10px;
+padding-bottom: 10px;
+overflow: hidden;
+border-bottom: 1px solid #ddd;
+}
+.input-row input {
+float: right;
+width: 65%;
+padding-left: 0;
+margin-bottom: 0;
+border: 0;
+height:30px;
+line-height:20px;
+}
+.input-row label + select {
+float: right;
+width: 65%;
+padding-left: 0;
+margin-bottom: 0;
+border-bottom: 0;
+font: inherit;
+height: 35px;
+border: none;
+background-color: transparent;
+box-shadow: none;
+-webkit-appearance: none;
+}
+.textarea-row label + textarea {
+float: right;
+width: 65%;
+padding-left: 0;
+margin-bottom: 0;
+border-bottom: 0;
+font: inherit;
+height: 60px;
+border: none;
+background-color: transparent;
+box-shadow: none;
+border: 1px solid #dcdcdc;
+}
+/*按钮*/
+.btn-green{ border-radius:5px; background: #B2D233; border: 1px solid #CBE176; color: #fff;}
+.center-box{ width: 100%; text-align: center;}

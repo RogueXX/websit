@@ -1,0 +1,242 @@
+/* common */
+body{font-family: Helvetica,STHeiti,Droid Sans Fallback; font-size:100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background:#ebebeb; }
+li{list-style:none}
+a{text-decoration:none;color:#000}
+a{outline:none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a:active,a:focus,
+a:hover {text-decoration:none;}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+margin: 0;
+padding: 0;
+}
+
+/*未拿*/
+
+.directions-box{ background-color: #a21c1b;padding: 30px 10px 5px;}
+.unclaimed-ft{
+background:url(../images/hb_03.png) no-repeat center top;
+width:100%;
+height:280px;
+background-size:100% 280px;
+position: relative;
+}
+.rob-btn{position: absolute; top: 80px; text-align: center;width: 100%;}
+.rob-btn img{width:70%;}
+.share-btn{position: absolute; bottom: 10%; text-align: center;width: 100%;}
+.share-btn img{width:60%;}
+/*已拿*/
+.redEnvelope-cont{}
+.redEnvelope{ position: relative;}
+.redEnvelope img,
+.open-redEnvelope img{width:100%;height:100%;display:block;}
+.rules{
+position: absolute;
+bottom: 0;
+z-index: 9;
+width: 100%;
+top:150px;
+
+}
+.rules-title img{width:100%;height:100%;display:block;}
+.rules-title{ text-align: center; color:#ffca6c;margin: 0 10px; }
+.rules-title span{  font-weight: bold; font-size: 90%;padding: 8px 0;display: block;}
+.rules-cont{margin: 5px 10px;}
+.rules-cont ul{}
+.rules-cont ul li{ font-size: 80%; color:#ffca6c;line-height: 22px; margin-left:22px;}
+.rules-cont ul li em{ border-radius:50%; background:#ffca6c;color:#900;padding:0 5px;margin-top:3px;margin-left:-22px;float:left;line-height:150%;}
+.btn-red{ background-color:#790102; color: #fff; border:1px solid #790102; }
+.redEnvelope-cont .mian{
+background:url(../images/hongbao_02.png) no-repeat center top;
+width:100%;
+height:750px;
+background-size:100% 750px;
+position: relative;
+}
+.redEnvelope-cont .footer{
+background:#b82523 url(../images/hongbao_03.png) no-repeat center top;
+width:100%;
+height:450px;
+background-size:100% 250px;
+position: relative;
+}
+.redEnvelope-cont .footer .share{
+position: absolute;
+top: 90px;
+z-index: 5;
+background: url(../images/hb-btn_share.png) no-repeat center top;
+width: 50%;
+height: 50px;
+background-size: 100%;
+left: 25%;
+}
+.winning{
+   position: absolute;
+    top:10px;
+    font-size: 140%;
+    text-align: center;
+    width: 100%;
+}
+.red{ color:#9f1816; margin: 5px auto; font-size: 160%;}
+.orange{ 
+color: #ac140c;
+font-size: 16px;
+font-weight: bold;
+line-height: 26px;
+}
+.black{font-size: 60%; color: #333;}
+.barCode{ margin-top: 15px;}
+
+.loading {
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    background:#000 url(/Templates/vshop/v2/images/loadinglit.gif) center center no-repeat;
+    top: 50%;
+    left: 50%;
+    margin-left:-60px;
+    margin-top:-60px;
+    line-height: 140px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.7;
+    z-index: 9999;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+/*中奖排名*/
+.hongbao_list {
+    position: absolute;
+    top:380px;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.hongbao_list ul {
+    min-height: 206px;
+ margin: 0 6% 0 8%;
+}
+
+.hongbao_list li:nth-child(odd) {
+    width: 98%;
+    height: 38px;
+    line-height: 38px;
+    
+}
+
+.hongbao_list li:nth-child(even) {
+    width: 98%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #F8D89F;
+}
+
+.hongbao_list li span.hongbao_number {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.hongbao_list span {
+    display: inline-block;
+}
+
+.hongbao_list .avatar {
+    vertical-align: middle;
+    width: 26px;
+    height: 26px;
+}
+
+.more-btn {
+font-size: 14px;
+background-color: #e74a32;
+color: #fff;
+text-decoration: none;
+padding: 15px 30px;
+border-radius: 5px;
+display: inline-block;
+line-height: 1.5;
+margin-top: 15px;
+}
+.more-btn a ,.small-btn a{ color:#fff;}
+.small-btn {
+font-size: 12px;
+background-color: #e74a32;
+color: #fff;
+text-decoration: none;
+padding: 5px 15px;
+border-radius: 5px;
+display: inline-block;
+line-height: 1.5;
+margin-top: 15px;
+}
+.hongbao_desc {
+    max-width: 320px;
+    padding: 0 20px 0 20px ;
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+}
+
+.hongbao_list span {
+    display: inline-block;
+}
+
+.hongbao_desc p {
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 1px dashed #000;
+}
+
+/*iPad*/
+@media (min-width: 768px) {
+ .rules-cont ul {
+  text-align: center;
+  margin-left:0;
+  }
+ .unclaimed-ft {
+background: url(../images/hb_03.png) no-repeat center top;
+width: 100%;
+height: 350px;
+background-size: 100% 350px;
+position: relative;
+}
+ .rob-btn img {
+width: 40%;
+}
+ .share-btn {
+position: absolute;
+text-align: center;
+width: 100%;
+bottom: 15px;
+}
+ .share-btn img {
+width: 30%;
+}
+ .redEnvelope-cont .footer {
+background: #b82523 url(../images/hongbao_03.png) no-repeat center top;
+width: 100%;
+height: 450px;
+background-size: 100% 450px;
+position: relative;
+}
+ .redEnvelope-cont .footer .share {
+position: absolute;
+top: 90px;
+z-index: 5;
+background: url(../images/hb-btn_share.png) no-repeat center top;
+width: 50%;
+height: 30%;
+background-size: 100%;
+left: 25%;
+}
+ .rules {
+position: absolute;
+bottom: 0;
+z-index: 9;
+width: 100%;
+top: 230px;
+}
+}

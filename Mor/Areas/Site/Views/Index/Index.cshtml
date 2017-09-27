@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "MOr官网-联系我们";
+}
+
+<section @*class="bg-img3"*@ class="content">
+    <div class="subheader-nav">
+        <h2 class="sub-title text-white">联系我们</h2>
+    </div>
+    <!--内容 S-->
+    <div class="content-marging">
+        <div class="map">
+            <!-- 地图内容-->
+            <img src="~/Content/hotelimages/contactus_map.jpg" class="img-responsive" />
+        </div>
+        <ul class="contact" data-bind="with:data">
+            <li><span class="bold">地址：<span data-bind="text:HotelAddress"></span></span></li>
+            <li><span class="bold">总机电话：<span data-bind="text:HotelTelphone"></span></span></li>
+            <li><span class="bold">餐厅电话：<span data-bind="text:HotelTelphone"></span></span></li>
+            <li><span class="bold">投诉电话：<span data-bind="text:HotelTelphone"></span></span></li>
+            <li><span class="bold">传真号码：<span data-bind="text:HotelFax"></span></span></li>
+            <li><span class="bold">网址：<span data-bind="text:Url"></span></span></li>
+            <li><span class="bold">邮箱：<span data-bind="text:HotelEmail"></span></span></li>
+        </ul>
+
+    </div>
+    <!--内容 E-->
+</section>
+
+<script type="text/javascript">
+    var viewModel = function () {
+        var self = this, $token = $.queryString('token'), $HotelID = $.queryString('HotelID');
+
+        self.data = ko.observable();
+
+        self.Load = function () {
+            $.post('/SAPI/HotelManage/Single', { token: $token, HotelID: $HotelID }, function (result) {
+                self.data(result);
+            });
+        }
+
+        self.Load();
+    }
+    ko.applyBindings(new viewModel());
+</script>
+
