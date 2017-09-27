@@ -5,9 +5,9 @@
     <add key="ClientValidationEnabled" value="true"/>
     <add key="UnobtrusiveJavaScriptEnabled" value="true"/>
  
-	<add key="mssql" value="Data source=.;initial catalog=okcopy;persist security info=True;user id=sa;password=123;" />  
+	<add key="mssql" value="Data source=.;initial catalog=mor;persist security info=True;user id=sa;password=123;" />  
 	
-	<add key="baseUrl" value="http://localhost:200" />
+	<add key="baseUrl" value="http://localhost:100" />
 	<add key="ApplicationName" value="OkCopy" />
 	<add key="ClientName" value="大数据分析系统" />
 	<add key="AuthKey" value="i8gzuQvLJ" />

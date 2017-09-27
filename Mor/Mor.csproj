@@ -126,10 +126,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\API\APIAreaRegistration.cs" />
+    <Compile Include="Areas\API\Controllers\SiteController.cs" />
     <Compile Include="Areas\Site\Controllers\IndexController.cs" />
     <Compile Include="Areas\Site\SiteAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -956,6 +957,7 @@
     <Content Include="Content\css\WeChat\VIPRepeat.jpg" />
     <Content Include="Content\css\WeChat\VIPtel.png" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\js\theme.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\ace\assets\css\less\ace-features.less" />
@@ -1392,6 +1394,7 @@
     <Content Include="Content\ace\mustache\php\vendor\Mustache\Tokenizer.php" />
     <Content Include="Content\ace\package.json" />
     <Content Include="Scripts\bootstrap-prompts-alert.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\common.js" />
     <Content Include="Scripts\echarts.min.js" />
     <Content Include="Content\css\fonts\ratchicons.eot" />
@@ -1399,6 +1402,8 @@
     <Content Include="Content\css\fonts\ratchicons.woff" />
     <Content Include="Areas\Site\Views\Web.config" />
     <Content Include="Areas\Site\Views\Index\Index.cshtml" />
+    <Content Include="Areas\Site\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Site\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
@@ -1412,6 +1417,8 @@
     <Content Include="Scripts\knockout.validation.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1424,13 +1431,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Index\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\API\Models\" />
     <Folder Include="Areas\Site\Models\" />
-    <Folder Include="Areas\Site\Views\Shared\" />
     <Folder Include="Content\ace\mustache\app\views\pages\partials\_shared\" />
     <Folder Include="Content\ace\mustache\php\_cache\" />
     <Folder Include="Models\" />
