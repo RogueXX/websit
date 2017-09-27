@@ -1,6 +1,3 @@
-D:\webBills\mor\websit\Mor\bin\okcopy.dll.config
-D:\webBills\mor\websit\Mor\bin\okcopy.dll
-D:\webBills\mor\websit\Mor\bin\okcopy.pdb
 D:\webBills\mor\websit\Mor\bin\Antlr3.Runtime.dll
 D:\webBills\mor\websit\Mor\bin\Common.dll
 D:\webBills\mor\websit\Mor\bin\DataAccess.dll
@@ -34,5 +31,8 @@ D:\webBills\mor\websit\Mor\bin\zh-Hans\System.Web.WebPages.resources.dll
 D:\webBills\mor\websit\Mor\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\webBills\mor\websit\Mor\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\webBills\mor\websit\Mor\obj\Debug\Mor.csprojResolveAssemblyReference.cache
-D:\webBills\mor\websit\Mor\obj\Debug\okcopy.dll
-D:\webBills\mor\websit\Mor\obj\Debug\okcopy.pdb
+D:\webBills\mor\websit\Mor\bin\Mor.dll.config
+D:\webBills\mor\websit\Mor\bin\Mor.dll
+D:\webBills\mor\websit\Mor\bin\Mor.pdb
+D:\webBills\mor\websit\Mor\obj\Debug\Mor.dll
+D:\webBills\mor\websit\Mor\obj\Debug\Mor.pdb
