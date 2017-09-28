@@ -1,0 +1,77 @@
+.bg_img{background: url(../images/bg_black.jpg) no-repeat;}
+    .title_h3{font-size: 36px; text-align: center;padding:30px;color:#fff;}
+.contact {
+    width:800px;
+    margin: 0 auto;
+    padding-top: 100px;
+    
+}
+.contact .address {
+    padding:2%;
+    margin: 10px ;
+}
+.contact .address {
+    border: 1px solid #e2e2e2;
+    background-color: #f5fcff
+}
+.contact .address .tab {
+}
+
+.contact .address .subnav a {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px
+}
+
+.contact .address .subnav .hot {
+    position: relative;
+    bottom: -1px
+}
+
+.contact .address_in {
+    padding-left: 26px;
+    position: relative
+}
+
+
+.contact .address_in dt {
+    position: relative;
+    font-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 22px
+}
+
+.contact .address_in dt span {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.contact .address_in dd {
+    line-height: 26px;
+    font-size: 14px;
+}
+.contact .address_in dd em{
+    color:#fe3f3c;
+}
+.contact .address_in .icon_adress{
+    background: url(../images/icon_address.jpg) no-repeat;width:15px;height:21px;-webkit-background-size: 100% auto;
+    background-size: 100% auto;display:inline-block;
+}
+.contact .address_er {
+    text-align: center;
+    width:25%;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    top:0;
+}
+.contact .address_er img{height:100%;width:auto;}
+
+
+@media (max-width: 768px) {
+    .title_h3{font-size: 26px;}
+    .contact{width:414px;}
+}

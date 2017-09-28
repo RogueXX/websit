@@ -16,5 +16,10 @@ namespace Mor.Areas.Site.Controllers
             return View();
         }
 
+        public ActionResult TicketInfo()
+        {
+            return View();
+        }
+
     }
 }
