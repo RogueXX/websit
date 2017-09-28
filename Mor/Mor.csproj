@@ -140,6 +140,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Site\TicketInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1450,7 +1451,6 @@
     <Folder Include="Areas\Site\Views\Shared\" />
     <Folder Include="Content\ace\mustache\app\views\pages\partials\_shared\" />
     <Folder Include="Content\ace\mustache\php\_cache\" />
-    <Folder Include="Models\" />
     <Folder Include="static\" />
   </ItemGroup>
   <ItemGroup>
