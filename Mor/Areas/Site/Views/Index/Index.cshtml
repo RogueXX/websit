@@ -18,7 +18,7 @@
     </div>
     <!--内容 E-->
 </section>
-
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
     var viewModel = function () {
         var t = $("#ff");
@@ -28,7 +28,7 @@
         self.data = ko.observable();
 
         self.Load = function () {
-            $.post('/API/Site/Query', null, function (result) {
+            $.post('/API/Site/SendEmail', null, function (result) {
                 self.data(result);
             });
 

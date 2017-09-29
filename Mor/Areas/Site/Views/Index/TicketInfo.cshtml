@@ -1,6 +1,5 @@
 ﻿@{
     ViewBag.Title = "TicketInfo";
-    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -14,7 +13,7 @@
     <!-- header block start -->
     <link rel="stylesheet" href="~/static/css/index.css">
     <!--   <script src="~/Scripts/dca75d2aaf3743afa03569fbf74bf3ae.js"></script> -->
-    <script src="~/Scripts/mobile.js"></script>
+    <script src="~/Scripts/moblie.js"></script>
     <style>
         body {
             width: 100% !important;
@@ -303,3 +302,24 @@
 
 </body>
 </html>
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    var viewModel = function () {
+        var t = $("#ff");
+        console.log(t)
+        var self = this;
+
+        self.data = ko.observable();
+
+        self.Load = function () {
+            $.post('/API/Site/SendEmail', null, function (result) {
+                self.data(result);
+            });
+
+            console.log(this)
+        }
+
+        self.Load();
+    }
+    ko.applyBindings(new viewModel());
+</script>
