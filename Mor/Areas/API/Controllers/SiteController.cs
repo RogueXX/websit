@@ -199,7 +199,7 @@ namespace Mor.Areas.API.Controllers
                 SmtpClient smtp = new SmtpClient();
                 //指定发件人的邮件地址和密码以验证发件人身份
                 smtp.Credentials = new System.Net.NetworkCredential(mailFrom, mailPwd);
-
+                smtp.EnableSsl = true;
 
                 //设置SMTP邮件服务器
                 smtp.Host = host;
@@ -223,7 +223,7 @@ namespace Mor.Areas.API.Controllers
         {
             Email email = new Email();
             email.mailFrom = "634428127@qq.com";
-            email.mailPwd = "13570222904/..,,";
+            email.mailPwd = "sxuykesntxpfbeca";
             email.mailSubject = "购票";
             email.mailBody = "购票测试";
             email.isbodyHtml = true;    //是否是HTML
