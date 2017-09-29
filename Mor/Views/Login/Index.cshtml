@@ -1,0 +1,256 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html class="login-bg">
+<head>
+    <title>登录 - @Mor.Common.UserEnvironment.ApplicationName</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/content/css/login.css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+   
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="box">
+            <h3>
+                @Mor.Common.UserEnvironment.ApplicationName<br />
+                <small>@Mor.Common.UserEnvironment.ApplicationVersion</small>
+            </h3>
+            <div class="content-wrap">
+                <form role="form" method="post">
+
+                    <input class="form-control" type="text" name="user_code" placeholder="用户名">
+                    <input class="form-control" type="password" name="user_pwd" placeholder="密码">
+
+                    @if (ViewBag.ErrorCount > 5)
+                    {
+                        <div class="text-right">
+                            <input class="form-control" type="text" name="verify_code" placeholder="请输入验证码">
+                            <img src="/login/VerifyCode?_t=@DateTime.Now.Ticks"
+                                 alt="验证码" title="看不清楚？点击此处重新获取" id="verycode" onclick="javascript:this.src='/Login/VerifyCode?_t='+new Date().valueOf();" />
+                        </div>
+                    }
+
+                    <div class="remember">
+                        <input id="remember-me" type="checkbox">
+                        <label for="remember-me">记住我的账号</label>
+                    </div>
+                    <button type="submit" class="btn-glow primary login">
+                        <i class="fa fa-sign-in"></i>
+                        登录
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="no-account">
+            <p><a href="/login/getpassword">取回密码</a>|<a href="#">使用帮助</a></p>
+            <p style="table-layout: fixed; word-break: break-all; overflow: hidden;"> <small>@Html.Raw(Mor.Common.UserEnvironment.ApplicationCopyright)</small></p>
+        </div>
+    </div>
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert('@Html.Raw(ViewBag.ErrorMessage)');
+            }</script>
+    }
+
+    <script id="fs" type="x-shader/x-fragment">
+        uniform sampler2D map;
+
+        uniform vec3 fogColor;
+        uniform float fogNear;
+        uniform float fogFar;
+
+        varying vec2 vUv;
+
+        void main() {
+
+        float depth = gl_FragCoord.z / gl_FragCoord.w;
+        float fogFactor = smoothstep( fogNear, fogFar, depth );
+
+        gl_FragColor = texture2D( map, vUv );
+        gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+        gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+        }
+
+    </script>
+    <script src="/content/pages/login/three.min.js"></script>
+    <script src="/content/pages/login/Detector.js"></script>
+    <script id="vs" type="x-shader/x-vertex">
+        varying vec2 vUv;
+
+        void main() {
+
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+        }
+
+    </script>
+    <script id="fs" type="x-shader/x-fragment">
+        uniform sampler2D map;
+
+        uniform vec3 fogColor;
+        uniform float fogNear;
+        uniform float fogFar;
+
+        varying vec2 vUv;
+
+        void main() {
+
+        float depth = gl_FragCoord.z / gl_FragCoord.w;
+        float fogFactor = smoothstep( fogNear, fogFar, depth );
+
+        gl_FragColor = texture2D( map, vUv );
+        gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
+        gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+
+        }
+
+    </script>
+    <script type="text/javascript">
+
+        ; (function (window) {
+
+            if (!Detector.webgl) {
+                // Detector.addGetWebGLMessage();
+                return;
+            }
+
+            document.body.style.cssText = 'background-color: #326696;margin: 0px;overflow: hidden;text-align: center;';
+
+
+            var container;
+            var camera, scene, renderer;
+            var mesh, geometry, material;
+
+            var mouseX = 0, mouseY = 0;
+            var start_time = Date.now();
+
+            var windowHalfX = window.innerWidth / 2;
+            var windowHalfY = window.innerHeight / 2;
+
+            init();
+
+            function init() {
+
+                container = document.createElement('div');
+                document.body.appendChild(container);
+
+                // Bg gradient
+                var canvas = document.createElement('canvas');
+                canvas.width = 32;
+                canvas.height = window.innerHeight;
+
+                var context = canvas.getContext('2d');
+
+                var gradient = context.createLinearGradient(0, 0, 0, canvas.height);
+                gradient.addColorStop(0, "#1e4877");
+                gradient.addColorStop(0.5, "#4584b4");
+
+                context.fillStyle = gradient;
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                container.style.background = 'url(' + canvas.toDataURL('image/png') + ')';
+                container.style.backgroundSize = '32px 100%';
+
+                //
+                camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 3000);
+                camera.position.z = 6000;
+
+                scene = new THREE.Scene();
+
+                geometry = new THREE.Geometry();
+
+                var texture = THREE.ImageUtils.loadTexture('/content/img/cloud10.png', null, animate);
+                texture.magFilter = THREE.LinearMipMapLinearFilter;
+                texture.minFilter = THREE.LinearMipMapLinearFilter;
+
+                var fog = new THREE.Fog(0x4584b4, -100, 3000);
+
+                material = new THREE.ShaderMaterial({
+
+                    uniforms: {
+
+                        "map": { type: "t", value: texture },
+                        "fogColor": { type: "c", value: fog.color },
+                        "fogNear": { type: "f", value: fog.near },
+                        "fogFar": { type: "f", value: fog.far },
+
+                    },
+                    vertexShader: document.getElementById('vs').textContent,
+                    fragmentShader: document.getElementById('fs').textContent,
+                    depthWrite: false,
+                    depthTest: false,
+                    transparent: true
+
+                });
+
+                var plane = new THREE.Mesh(new THREE.PlaneGeometry(64, 64));
+
+                for (var i = 0; i < 8000; i++) {
+
+                    plane.position.x = Math.random() * 1000 - 500;
+                    plane.position.y = -Math.random() * Math.random() * 200 - 15;
+                    plane.position.z = i;
+                    plane.rotation.z = Math.random() * Math.PI;
+                    plane.scale.x = plane.scale.y = Math.random() * Math.random() * 1.5 + 0.5;
+
+                    THREE.GeometryUtils.merge(geometry, plane);
+
+                }
+
+                mesh = new THREE.Mesh(geometry, material);
+                scene.add(mesh);
+
+                mesh = new THREE.Mesh(geometry, material);
+                mesh.position.z = -8000;
+                scene.add(mesh);
+
+                renderer = new THREE.WebGLRenderer({ antialias: false });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                container.appendChild(renderer.domElement);
+
+                //document.addEventListener('mousemove', onDocumentMouseMove, false);
+                window.addEventListener('resize', onWindowResize, false);
+
+            }
+
+            function onDocumentMouseMove(event) {
+
+                mouseX = (event.clientX - windowHalfX) * 0.25;
+                mouseY = (event.clientY - windowHalfY) * 0.15;
+
+            }
+
+            function onWindowResize(event) {
+
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+
+                renderer.setSize(window.innerWidth, window.innerHeight);
+
+            }
+
+            function animate() {
+
+                requestAnimationFrame(animate);
+
+                position = ((Date.now() - start_time) * 0.03) % 8000;
+
+                camera.position.x += (mouseX - camera.position.x) * 0.01;
+                camera.position.y += (-mouseY - camera.position.y) * 0.01;
+                camera.position.z = -position + 8000;
+
+                renderer.render(scene, camera);
+
+            }
+        })(window);
+    </script>
+</body>
+</html>

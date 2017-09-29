@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Mvc; 
+using Mor.Common;
+using Mor.DataAccess;
+using Mor.Web;
 
 namespace Mor.Areas.Admin.Controllers
 {
@@ -11,6 +14,7 @@ namespace Mor.Areas.Admin.Controllers
         //
         // GET: /Admin/Main/
 
+        [Auth]
         public ActionResult Index()
         {
             return View();
