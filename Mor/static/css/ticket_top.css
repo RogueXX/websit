@@ -1,0 +1,211 @@
+html {
+    font-size: 12px
+}
+
+.www-yunqi-act-2017-topbar-hz {
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 13px 0 rgba(4,0,0,.06)
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap {
+    *zoom:1;padding: 16px 70px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #fff
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap:after,.www-yunqi-act-2017-topbar-hz .module-wrap:before {
+    content: "";
+    display: table
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap:after {
+    clear: both
+}
+
+<!-- .www-yunqi-act-2017-topbar-hz .module-wrap.bg-transparent {
+    background-color: transparent!important
+} -->
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper {
+    height: 40px;
+    position: relative
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-logo {
+    width: 183px;
+    position: relative;
+    display: inline-block;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 6px
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-logo img {
+    width: 100%;
+    display: inline-block;
+    line-height: 40px
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel {
+    margin-left: 200px;
+    margin-right: 200px;
+    *zoom:1}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel:after,.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel:before {
+    content: "";
+    display: table
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel:after {
+    clear: both
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel .channel-list {
+    float: right
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel .channel-list .channel-item {
+    float: left;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 16px
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel .channel-list .channel-item .channel-link {
+    color: #000;
+    padding: 6px 0;
+    font-weight: 700
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel .channel-list .channel-item .channel-link:hover,.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel .channel-list .channel-item.menu-selected .channel-link {
+    border-bottom-width: 2px;
+    border-bottom-style: solid
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right {
+    *zoom:1;position: absolute;
+    right: 0;
+    top: 0
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right:after,.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right:before {
+    content: "";
+    display: table
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right:after {
+    clear: both
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right .button {
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #0e56ab;
+    color: #fff;
+    width: 90px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    float: right;
+    margin-right: 10px
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right .button:first-child {
+    margin-right: 0
+}
+
+.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right .button.disabled {
+    background-color: #999
+}
+
+@media (max-width: 768px) {
+    .www-yunqi-act-2017-topbar-hz .module-wrap {
+        padding:.29333333rem 0
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper {
+        height: 1.2rem
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper.channel-wrap {
+        height: auto
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper.channel-wrap .yq-channel {
+        margin-right: 0;
+        margin-left: 0;
+        padding: .93333333rem .26666667rem 0
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper.channel-wrap .yq-channel .channel-list {
+        *zoom:1;float: none
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper.channel-wrap .yq-channel .channel-list:after,.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper.channel-wrap .yq-channel .channel-list:before {
+        content: "";
+        display: table
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper.channel-wrap .yq-channel .channel-list:after {
+        clear: both
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper.channel-wrap .yq-channel .channel-list .channel-item {
+        float: left
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-logo {
+        width: 2.44rem;
+        line-height: 1.2rem
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel {
+        margin-left: 2.66666667rem;
+        margin-right: 1.46666667rem
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel .channel-list .channel-item {
+        padding: 0 .13333333rem;
+        font-size: .32rem;
+        line-height: 1.2rem
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-channel .channel-list .channel-item .channel-link {
+        padding: .08rem
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right {
+        *zoom:1;position: absolute;
+        right: 0;
+        top: .26666667rem;
+        padding-right: .26666667rem
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right:after,.www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right:before {
+        content: "";
+        display: table
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right:after {
+        clear: both
+    }
+
+    .www-yunqi-act-2017-topbar-hz .module-wrap .wrapper .yq-right .button {
+        line-height: .66666667rem;
+        font-size: .26666667rem;
+        padding: 0 .21333333rem;
+        height: .66666667rem;
+        width: auto;
+        margin-right: .13333333rem
+    }
+}

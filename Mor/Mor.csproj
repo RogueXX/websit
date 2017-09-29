@@ -140,6 +140,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Site\TicketInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1399,9 +1400,13 @@
     <Content Include="Content\ace\mustache\php\vendor\Mustache\Template.php" />
     <Content Include="Content\ace\mustache\php\vendor\Mustache\Tokenizer.php" />
     <Content Include="Content\ace\package.json" />
+    <Content Include="Scripts\85a2227df89c4979a057bcac7d5276be.js" />
     <Content Include="Scripts\bootstrap-prompts-alert.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\d1bcc190bcc24bd5bac8b7e8e3708a8c.js" />
+    <Content Include="Scripts\d7e4480d19514c61aa1382ae56741021.js" />
+    <Content Include="Scripts\dca75d2aaf3743afa03569fbf74bf3ae.js" />
     <Content Include="Scripts\echarts.min.js" />
     <Content Include="Content\css\fonts\ratchicons.eot" />
     <Content Include="Content\css\fonts\ratchicons.ttf" />
@@ -1413,7 +1418,11 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
+    <Content Include="Areas\Site\Views\Index\TicketInfo.cshtml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\hangye.js" />
+    <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -1424,11 +1433,74 @@
     <Content Include="Scripts\knockout-3.3.0.js" />
     <Content Include="Scripts\knockout.components.js" />
     <Content Include="Scripts\knockout.validation.min.js" />
+    <Content Include="Scripts\moblie.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\slider.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="static\css\5a071b7e24694247ae7ff550c28affda.css" />
+    <Content Include="static\css\common.css" />
+    <Content Include="static\css\contact.css" />
+    <Content Include="static\css\handye.css" />
+    <Content Include="static\css\index.css" />
+    <Content Include="static\css\index_1.css" />
+    <Content Include="static\css\layout-hangye-pc.css" />
+    <Content Include="static\css\meeting.css" />
+    <Content Include="static\css\partner.css" />
+    <Content Include="static\css\ticket.css" />
+    <Content Include="static\css\ticket_top.css" />
+    <Content Include="static\images\111.png" />
+    <Content Include="static\images\278-400.jpg" />
+    <Content Include="static\images\b1.jpg" />
+    <Content Include="static\images\banner1.jpg" />
+    <Content Include="static\images\bg-ticket.jpg" />
+    <Content Include="static\images\bg-ticket_01.jpg" />
+    <Content Include="static\images\bg_black.jpg" />
+    <Content Include="static\images\down.png" />
+    <Content Include="static\images\gaoduan.jpg" />
+    <Content Include="static\images\gaoduan_01.jpg" />
+    <Content Include="static\images\iconlei.png" />
+    <Content Include="static\images\icon_address.jpg" />
+    <Content Include="static\images\len.jpg" />
+    <Content Include="static\images\logo.png" />
+    <Content Include="static\images\logo_01.png" />
+    <Content Include="static\images\tb11ir5qfxxxxxdapxxxxxxxxxx-22-27.png" />
+    <Content Include="static\images\tb12ea4spxxxxbexpxxxxxxxxxx-15-15.png" />
+    <Content Include="static\images\tb1dfevrxxxxxctxxxxxxxxxxxx-295-295.png" />
+    <Content Include="static\images\tb1goyurxxxxxa_afxxxxxxxxxx-37-2.png" />
+    <Content Include="static\images\tb1hrcjrxxxxxbzaxxxxxxxxxxx-295-295.png" />
+    <Content Include="static\images\tb1ikxbrpxxxxapaxxxxxxxxxxx-1904-1150.jpg" />
+    <Content Include="static\images\tb1i_gfrxxxxxxzxfxxxxxxxxxx-295-295.png" />
+    <Content Include="static\images\tb1l4crrxxxxxxzxpxxxxxxxxxx-750-1093.jpg" />
+    <Content Include="static\images\tb1qfgorxxxxxa9xpxxxxxxxxxx-295-295.png" />
+    <Content Include="static\images\tb1qrohrxxxxxbgxxxxxxxxxxxx-330-434.png" />
+    <Content Include="static\images\tb1r6ukrxxxxxxlxxxxxxxxxxxx-330-434.png" />
+    <Content Include="static\picture\c6f79075d47a48dfa29a69d37b4dd409.gif" />
+    <Content Include="static\picture\tb10iugbzihskjjy0flxxadexxa-278-400.jpg" />
+    <Content Include="static\picture\tb12_jcb3mpmejjy1xcxxxpppxa-278-400.png" />
+    <Content Include="static\picture\tb13vigsxxxxxxuxpxxxxxxxxxx-44-20.png" />
+    <Content Include="static\picture\tb15grtqfxxxxbaaxxxxxxxxxxx-15-18.png" />
+    <Content Include="static\picture\tb1b8rtfwoqmejjy0foxxcshvxa-278-400.jpg" />
+    <Content Include="static\picture\tb1bgrtspxxxxb3xxxxxxxxxxxx-395-107.png" />
+    <Content Include="static\picture\tb1dqx3f3mpmejjy1xdxxasrxxa-278-400.jpg" />
+    <Content Include="static\picture\tb1e._pb3mpmejjy1xdxxasrxxa-278-400.png" />
+    <Content Include="static\picture\tb1e0hxqfxxxxx4apxxxxxxxxxx-750-476.jpg" />
+    <Content Include="static\picture\tb1fq48qfxxxxc7xvxxxxxxxxxx-94-94.png" />
+    <Content Include="static\picture\tb1glrtfwoqmejjy0foxxcshvxa-278-400.jpg" />
+    <Content Include="static\picture\tb1gso_rxxxxxagaxxxxxxxxxxx-944-532.jpg" />
+    <Content Include="static\picture\tb1gwvyb3oqmejjy0fpxxctxpxa-278-400.png" />
+    <Content Include="static\picture\tb1iphyb3mpmejjy1xbxxcwxvxa-278-400.png" />
+    <Content Include="static\picture\tb1j_neqfxxxxcqxpxxxxxxxxxx-14-18.png" />
+    <Content Include="static\picture\tb1kbu1bwmpmejjy1xbxxcwxvxa-133-86.png" />
+    <Content Include="static\picture\tb1nd5of3mpmejjy1xbxxcwxvxa-278-400.jpg" />
+    <Content Include="static\picture\tb1p_rjfwoqmejjy0fpxxctxpxa-278-400.jpg" />
+    <Content Include="static\picture\tb1rekqbsrrmkjjy0flxxxfepxa-278-400.png" />
+    <Content Include="static\picture\tb1sec6qfxxxxxuaxxxxxxxxxxx-186-31.png" />
+    <Content Include="static\picture\tb1ts5bqfxxxxcnxpxxxxxxxxxx-14-18.png" />
+    <Content Include="static\picture\tb1vnykfwoqmejjy0fnxxb8gfxa-278-400.jpg" />
+    <Content Include="static\picture\tb1vzhurpxxxxa2xfxxxxxxxxxx-944-532.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1450,8 +1522,6 @@
     <Folder Include="Areas\Site\Views\Shared\" />
     <Folder Include="Content\ace\mustache\app\views\pages\partials\_shared\" />
     <Folder Include="Content\ace\mustache\php\_cache\" />
-    <Folder Include="Models\" />
-    <Folder Include="static\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
