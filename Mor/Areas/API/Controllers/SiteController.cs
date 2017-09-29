@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Mor.Models.Site;
 using System.Text;
 using System.Net.Mail;
+using Mor.Areas.API.Models;
 
 namespace Mor.Areas.API.Controllers
 {
@@ -78,167 +79,19 @@ namespace Mor.Areas.API.Controllers
                 return Json(new { code = 1, message = "下单成功" });
             }
         }
-
-
+        /// <summary>
+        /// 邮箱发送
+        /// </summary>
+        /// <param name="to">收件人地址</param> 
+        /// <param name="body">邮件正文</param> 
+        /// <param name="subject">邮件的主题</param> 
+        /// <returns></returns>
         [HttpPost]
-        public ActionResult SendEmail()
+        public ActionResult SendEmail(string to, string body, string subject)
         {
-            SendToEmail();
+            //var data=new MailSendr("928710215@qq.com", "634428127@qq.com","测试","门票下单", "634428127@qq.com", "ncabmocrjzxtbbab");
+            var data = new MailSendr(to, "634428127@qq.com", body, subject, "634428127@qq.com", "ncabmocrjzxtbbab");
             return Json(new { code = 1, message = "下单成功" });
         }
-
-        public class Email
-        {
-            /// <summary>
-            /// 发送者
-            /// </summary>
-            public string mailFrom { get; set; }
-
-            /// <summary>
-            /// 收件人
-            /// </summary>
-            public string[] mailToArray { get; set; }
-
-            /// <summary>
-            /// 抄送
-            /// </summary>
-            public string[] mailCcArray { get; set; }
-
-            /// <summary>
-            /// 标题
-            /// </summary>
-            public string mailSubject { get; set; }
-
-            /// <summary>
-            /// 正文
-            /// </summary>
-            public string mailBody { get; set; }
-
-            /// <summary>
-            /// 发件人密码
-            /// </summary>
-            public string mailPwd { get; set; }
-
-            /// <summary>
-            /// SMTP邮件服务器
-            /// </summary>
-            public string host { get; set; }
-
-            /// <summary>
-            /// 正文是否是html格式
-            /// </summary>
-            public bool isbodyHtml { get; set; }
-
-            /// <summary>
-            /// 附件
-            /// </summary>
-            public string[] attachmentsPath { get; set; }
-
-            public bool Send()
-            {
-                //使用指定的邮件地址初始化MailAddress实例
-                MailAddress maddr = new MailAddress(mailFrom);
-                //初始化MailMessage实例
-                MailMessage myMail = new MailMessage();
-
-
-                //向收件人地址集合添加邮件地址
-                if (mailToArray != null)
-                {
-                    for (int i = 0; i < mailToArray.Length; i++)
-                    {
-                        myMail.To.Add(mailToArray[i].ToString());
-                    }
-                }
-
-                //向抄送收件人地址集合添加邮件地址
-                if (mailCcArray != null)
-                {
-                    for (int i = 0; i < mailCcArray.Length; i++)
-                    {
-                        myMail.CC.Add(mailCcArray[i].ToString());
-                    }
-                }
-                //发件人地址
-                myMail.From = maddr;
-
-                //电子邮件的标题
-                myMail.Subject = mailSubject;
-
-                //电子邮件的主题内容使用的编码
-                myMail.SubjectEncoding = Encoding.UTF8;
-
-                //电子邮件正文
-                myMail.Body = mailBody;
-
-                //电子邮件正文的编码
-                myMail.BodyEncoding = Encoding.Default;
-
-                myMail.Priority = MailPriority.High;
-
-                myMail.IsBodyHtml = isbodyHtml;
-
-                //在有附件的情况下添加附件
-                try
-                {
-                    if (attachmentsPath != null && attachmentsPath.Length > 0)
-                    {
-                        Attachment attachFile = null;
-                        foreach (string path in attachmentsPath)
-                        {
-                            attachFile = new Attachment(path);
-                            myMail.Attachments.Add(attachFile);
-                        }
-                    }
-                }
-                catch (Exception err)
-                {
-                    throw new Exception("在添加附件时有错误:" + err);
-                }
-
-                SmtpClient smtp = new SmtpClient();
-                //指定发件人的邮件地址和密码以验证发件人身份
-                smtp.Credentials = new System.Net.NetworkCredential(mailFrom, mailPwd);
-                smtp.EnableSsl = true;
-
-                //设置SMTP邮件服务器
-                smtp.Host = host;
-
-                try
-                {
-                    //将邮件发送到SMTP邮件服务器
-                    smtp.Send(myMail);
-                    return true;
-
-                }
-                catch (System.Net.Mail.SmtpException ex)
-                {
-                    return false;
-                }
-
-            }
-        }
-
-        protected object  SendToEmail()
-        {
-            Email email = new Email();
-            email.mailFrom = "634428127@qq.com";
-            email.mailPwd = "sxuykesntxpfbeca";
-            email.mailSubject = "购票";
-            email.mailBody = "购票测试";
-            email.isbodyHtml = true;    //是否是HTML
-            email.host = "smtp.126.com";//如果是QQ邮箱则：smtp:qq.com,依次类推
-            email.mailToArray = new string[] { "492026207@qq.com", "928710215@qq.com" };//接收者邮件集合
-            email.mailCcArray = new string[] { "928710215@qq.com" };//抄送者邮件集合
-            if (email.Send())
-            {
-                return new { code = 1, message = "发送成功" };
-            }
-            else
-            {
-                return new { code = 0, message = "发送失败" };
-            }
-        }
-
     }
 }
