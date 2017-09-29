@@ -134,6 +134,7 @@
     <Compile Include="Areas\API\Controllers\AdminController.cs" />
     <Compile Include="Areas\API\Controllers\Admin\BannerController.cs" />
     <Compile Include="Areas\API\Controllers\SiteController.cs" />
+    <Compile Include="Areas\API\Models\MailSendr.cs" />
     <Compile Include="Areas\Site\Controllers\IndexController.cs" />
     <Compile Include="Areas\Site\SiteAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -1517,7 +1518,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\API\Models\" />
     <Folder Include="Areas\Site\Models\" />
     <Folder Include="Areas\Site\Views\Shared\" />
     <Folder Include="Content\ace\mustache\app\views\pages\partials\_shared\" />
@@ -1552,9 +1552,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>32335</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:100</IISUrl>
+          <IISUrl>http://localhost:100/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

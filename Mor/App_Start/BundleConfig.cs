@@ -30,7 +30,7 @@ namespace Mor
                 "~/Scripts/bootstrap-prompts-alert.js",
                 "~/Scripts/require.js",
                 "~/Scripts/knockout.components.js"
-                ,"~/Scripts/common.js"
+                //,"~/Scripts/common.js"
                 ));
               
             // 页面样式
