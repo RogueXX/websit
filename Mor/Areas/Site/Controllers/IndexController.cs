@@ -11,7 +11,7 @@ namespace Mor.Web.Areas.Site.Controllers
         //
         // GET: /Site/Index/
 
-        public ActionResult Index()
+        public ActionResult meeting()
         {
             return View();
         }

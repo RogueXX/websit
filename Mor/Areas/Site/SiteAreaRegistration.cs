@@ -16,8 +16,8 @@ namespace Mor.Web.Areas.Site
         {
             context.MapRoute(
                 "Site_default",
-                "Site/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "Site/{action}/{controller}/{id}",
+                new { action = "Index",Controller="Index", id = UrlParameter.Optional }
             );
         }
     }

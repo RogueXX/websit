@@ -1,9 +1,11 @@
-.bg_img{background: url(../images/bg_black.jpg) no-repeat;}
+.bg_img{background: url(../images/bg_black.jpg) repeat-y;-webkit-background-size: 100% auto;
+background-size: 100% auto;}
     .title_h3{font-size: 36px; text-align: center;padding:30px;color:#fff;}
 .contact {
     width:800px;
     margin: 0 auto;
     padding-top: 100px;
+    padding-bottom: 50px;
     
 }
 .contact .address {

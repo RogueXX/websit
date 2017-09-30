@@ -48,6 +48,24 @@ namespace Mor.Web
             );
 
 
+            // 官网样式
+            bundles.Add(new StyleBundle("~/bundles/sitecss").Include(
+                "~/Content/bootstrap.css", 
+                "~/static/css/common.css", 
+                "~/static/css/index_1.css", 
+                "~/static/css/handye.css", 
+                "~/static/css/layout-hangye-pc.css" 
+                )
+            );
+            // 官网脚本
+            bundles.Add(new ScriptBundle("~/bundles/sitecommon").Include(
+                "~/static/js/jquery-1.7.2.min.js",
+                "~/static/js/slider.js",
+                "~/static/js/hangye.js",
+                "~/static/js/dca75d2aaf3743afa03569fbf74bf3ae.js",
+                "~/static/js/moblie.js",
+                "~/static/js/index.js" 
+                )); 
         }
     }
 }

@@ -1,0 +1,322 @@
+.reviewtitle{ width: 488px; border-bottom: 3px solid #f00;color:#fff;font-size: 30px;padding-bottom: 10px;}
+.box{padding:100px 0;}
+    
+    .box ul{ position: relative; height: 540px;}
+    .box li{ height: 270px; position: absolute; overflow: hidden;}
+    .box ul li img{width:100%;}
+    .part01,.part02,.part03{top: 0;}
+    .part04,.part05,.part06{bottom: 0;}
+    .part01,.part04{ left: 0;}
+    .part02,.part05{right:30%;}
+    .part03,.part06{right:0;}
+    .part01,.part04{width:40%;}
+    .part02,.part05,.part03,.part06{width:30%;}
+.bg_one{background: url(../images/bg_one.jpg) repeat-y;-webkit-background-size: 100% auto;
+background-size: 100% auto;padding: 20px 0;}
+.bg_two{background: url(../images/bg_two.jpg) repeat-y;-webkit-background-size: 100% auto;
+background-size: 100% auto;padding: 20px 0;}
+
+/* concert begin */
+
+.concert .i1 {
+    padding: 20px 28px 56px 28px;
+    background: url(/wp-content/uploads/2016/12/concert_bg1.png) center center repeat-x;
+    background-size: contain;
+}
+
+    .concert .i1 p {
+        font-size: 27.99px;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+.concert .ctb1 > div {
+    display: table-cell;
+    width: 33.33%;
+    vertical-align: top;
+    overflow:hidden;
+}
+
+.concert .ctb1 > div > img{
+    -webkit-transition: .7s;
+    transition: .7s;
+}
+
+.concert .ctb1 > div:hover > img{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.concert .ctb2 {
+    margin-bottom: 96px;
+}
+
+    .concert .ctb2 .tb1, .concert .ctb2 .tb2 {
+        display: table-cell;
+        vertical-align: top;
+        color:#fff;
+    }
+
+    .concert .ctb2 .tb1 {
+        font-size: 25.17px;
+        background: url(../images/concert07.jpg) center center no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+        line-height: 1.6;
+        padding: 0 40px;
+    }
+
+    .concert .ctb2 .tb2 {
+        max-width: 544px;
+        width: 48.57%;
+        overflow:hidden;
+    }
+    .concert .ctb2 .tb2 > img {
+        -webkit-transition: .7s;
+        transition: .7s;
+    }
+    .concert .ctb2 .tb2:hover > img {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+.concert .ctb1 .ctb3 {
+    font-size: 27.99px;
+    padding: 0 36px;
+    line-height: 1.6;
+    color:#fff;
+    background-color: rgba(254, 63, 60, 0.43);
+}
+
+.concert .i2 {
+    /*17-01-06 font-size: 24.34px;*/
+    text-align: center;
+    /*padding: 180px 0 110px 0;*/
+    padding:140px 0 70px 0;
+    font-size:15.17px;
+    position: relative;
+    /*margin-bottom: -60px;*/
+    margin-bottom:-90px;
+    background: url(/wp-content/uploads/2016/12/concert_bg2.png) center center repeat-x;
+    background-size: contain;
+}
+
+    .concert .i2 span {
+        display: inline-block;
+    }
+.max {
+    max-width: 1120px;
+    margin: 0px auto;
+}
+.m3 .b-box {
+    background: url(../images/bg4.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 2.4rem 0%;
+}
+.m3 .item {
+    float: left;
+    width: 19%;
+    text-align: center;
+}
+.m3 .item:nth-child(1),
+.m3 .item:nth-child(6) {
+    margin-left: -5%;
+}
+.m3 .item:nth-child(2),
+.m3 .item:nth-child(7) {
+    margin-left: -5%;
+}
+.m3 .item:nth-child(3),
+.m3 .item:nth-child(8) {
+    margin-left: -2%;
+}
+.m3 .item:nth-child(4),
+.m3 .item:nth-child(9) {
+    margin-left: 1%;
+}
+.m3 .item:nth-child(5),
+.m3 .item:nth-child(10) {
+    margin-left: 6%;
+}
+.m3 .item>div {
+    width: 286px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.m3 .item>div>div {
+    padding-bottom: 60%;
+    position: relative;
+}
+.m3 .item>div>div>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.m3 .item>div>div>div div {
+    font-size: 11px;
+    text-align: center;
+    transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+.m3 .item span {
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
+    color:#fff;
+}
+.m3 .item font {
+    font-size: 40px;
+    height: 66px;
+    display: inline-block;
+    line-height: 66px;
+    color:#fff;
+}
+.m3 .item font.f2 {
+    font-size: 40px;
+}
+.m3 .item b {
+    font-size: 18px;
+}
+.m3 .item b.b2 {
+    line-height: 1;
+    position: relative;
+    top: -20px;
+    font-size: 22px;
+}
+.m3 .item b.b1 {
+    font-size: 30px;
+}
+.m3 .item b.b3 {
+    font-size: 24px;
+}
+.m3 .item i {
+    display: block;
+    width: 12%;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+.m3 .item i:before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.m3 .item-wp01 .item:nth-child(1) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic01.png);
+}
+.m3 .item-wp01 .item:nth-child(2) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic02.png);
+}
+.m3 .item-wp01 .item:nth-child(3) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic03.png);
+}
+.m3 .item-wp01 .item:nth-child(4) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic04.png);
+}
+.m3 .item-wp01 .item:nth-child(5) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic05.png);
+}
+.m3 .item-wp02 .item:nth-child(1) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic06.png);
+}
+.m3 .item-wp02 .item:nth-child(2) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic07.png);
+}
+.m3 .item-wp02 .item:nth-child(3) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic08.png);
+}
+.m3 .item-wp02 .item:nth-child(4) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic09.png);
+}
+.m3 .item-wp02 .item:nth-child(5) i:before {
+    background-image: url(http://beijing.thegmic.cn/wp-content/uploads/2017/01/ic10.png);
+}
+@media (max-width: 1160px) {
+    .max {
+        padding:0 20px;
+    }
+}
+@media (max-width:1120px) {
+
+    .concert .ctb2 .tb1 {
+        font-size: 20px;
+    }
+
+    .concert .i1 p {
+        font-size: 20px;
+    }
+
+    .concert .ctb1 .ctb3 {
+        font-size: 20px;
+    }
+
+    .concert .i2 {
+        font-size: 20px;
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width:640px) {
+    .concert .i1 p {
+        font-size: 16.32px;
+    }
+
+    .concert .ctb2 .tb1 {
+        font-size: 14.68px;
+    }
+
+    .concert .h-headline-1 span {
+        font-size: 28px;
+    }
+
+    .concert .ctb1 .ctb3 {
+        font-size: 16.32px;
+        padding: 2rem 0.6rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .concert .ctb2 {
+        display: block;
+        margin: 0;
+    }
+
+        .concert .ctb2 .tb1, .concert .ctb2 .tb2 {
+            display: block;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .concert .ctb2 .tb1 {
+            padding: 1rem .6rem;
+            margin-bottom: 1rem;
+        }
+
+        .concert .ctb2 .tb2 {
+            margin: 0px auto;
+        }
+
+    .concert .ctb1 {
+        display: block;
+    }
+
+        .concert .ctb1 > div {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+
+}
+.concert .ctb1 > div img{
+    width:100%;
+}
+/* concert end */

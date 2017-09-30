@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
     font-family:iconfont;
     src:url("//at.alicdn.com/t/font_376588_s5b0017y6n4gqfr.eot?t=1502680253550");
     src:url("//at.alicdn.com/t/font_376588_s5b0017y6n4gqfr.eot?t=1502680253550#iefix") format("embedded-opentype"),url("//at.alicdn.com/t/font_376588_s5b0017y6n4gqfr.woff?t=1502680253550") format("woff"),url("//at.alicdn.com/t/font_376588_s5b0017y6n4gqfr.ttf?t=1502680253550") format("truetype"),url("//at.alicdn.com/t/font_376588_s5b0017y6n4gqfr.svg?t=1502680253550#iconfont") format("svg")
@@ -38,7 +38,7 @@
     box-sizing:border-box;
     padding:12px 70px;
     *zoom:1;
-    background: rgba(0,0,0,0.9);
+    
 }
 .wb-zc-aliyun-xfmod-yunqi-topbar .module-wrap:after,.wb-zc-aliyun-xfmod-yunqi-topbar .module-wrap:before {
     content:"";
@@ -188,6 +188,24 @@
 .wb-zc-aliyun-xfmod-yunqi-topbar .module-wrap .inner {
     display:none
 }
+
+/*轮播图*/
+
+.b-banner{position:relative;}
+.b-banner .focus{height:600px;width:100%;z-index:2;position:relative;}
+.b-banner .focus .f_pic{width:100%;height:600px;background-repeat:no-repeat;background-position:center 0;-webkit-background-size: auto 100%;
+background-size:auto 100%;}
+.b-banner .focus .f_pic a{width:100%;height:100%;display:inline-block;}
+
+.b-banner .focus .pagination{bottom:32px;position:absolute;  padding:0 30px;left:0;right:0;text-align: center;}
+.b-banner .focus .pagination .toc{display:inline-block;margin:0 3px;width:24px;height:5px;background-color: #707070;cursor: pointer;line-height: 66px;overflow:hidden;}
+.b-banner .focus .pagination .selected{background:#f8b551;}
+/*倒计时*/
+.daoshu{position: absolute;bottom:50px;left: 0;right: 0;margin:auto;z-index: 100;background-color: #fe3f3c;color:#fff;height:50px;line-height: 50px;width:200px;text-align: center;font-size: 12px;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000);background-color: rgba( 254, 63, 60, 0.9 );
+}
+
+.daoshu span{font-size: 16px;color:#000;font-weight: 700;margin:0 5px;}
+
 @media (max-width:768px) {
     .wb-zc-aliyun-xfmod-yunqi-topbar .module-wrap {
     padding:0
@@ -314,6 +332,10 @@
     background-color:#4902b3;
     overflow:hidden
 }
+
+.daoshu{position: absolute;bottom:50px;left: 0;right: 0;margin:auto;z-index: 100;background-color: #fe3f3c;color:#fff;height:40px;line-height: 40px;width:150px;text-align: center;font-size: 12px;
+}
+.daoshu span{font-size: 16px;color:#000;font-weight: 700;margin:0 5px;}
 }
 
 .content_about,.content_about_r{color:#999;font-size: 12px;padding-left: 200px!important;position:relative;line-height: 24px;}
@@ -324,12 +346,3 @@
 }
 
 
-/*轮播图*/
-.b-banner .focus{height:600px;width:100%;z-index:2;position:relative;}
-.b-banner .focus .f_pic{width:100%;height:600px;background-repeat:no-repeat;background-position:center 0;-webkit-background-size: auto 100%;
-background-size:auto 100%;}
-.b-banner .focus .f_pic a{width:100%;height:100%;display:inline-block;}
-
-.b-banner .focus .pagination{bottom:32px;position:absolute;  padding:0 30px;left:0;right:0;text-align: center;}
-.b-banner .focus .pagination .toc{display:inline-block;margin:0 3px;width:24px;height:5px;background-color: #707070;cursor: pointer;line-height: 66px;overflow:hidden;}
-.b-banner .focus .pagination .selected{background:#f8b551;}
