@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Mor.Areas.Site.Controllers
+namespace Mor.Web.Areas.Site.Controllers
 {
     public class IndexController : Controller
     {

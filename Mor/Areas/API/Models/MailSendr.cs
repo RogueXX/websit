@@ -5,7 +5,7 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Web;
 
-namespace Mor.Areas.API.Models
+namespace Mor.Web.Areas.API.Models
 {
     public class MailSendr
     {

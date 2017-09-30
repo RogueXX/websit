@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
-using System.Web.Mvc; 
+using System.Web.Mvc;
 
 namespace Mor.Web
 {
@@ -89,17 +89,25 @@ namespace Mor.Web
     /// </summary>
     public class BaseAPIController : __BaseController
     {
-
-        protected override void OnAuthentication(System.Web.Mvc.Filters.AuthenticationContext filterContext)
+        protected override void OnAuthorization(AuthorizationContext filterContext)
         {
-            // base.OnAuthentication(filterContext);
-
+            // base.OnAuthorization(filterContext);
             if (UserEnvironment.UserInfo == null || UserEnvironment.UserInfo.UserId <= 0)
             {
                 throw new Exception("用户未登录！");
             }
-
         }
+
+        //protected override void OnAuthentication(System.Web.Mvc.Filters.AuthenticationContext filterContext)
+        //{
+        //    // base.OnAuthentication(filterContext);
+
+        //    if (UserEnvironment.UserInfo == null || UserEnvironment.UserInfo.UserId <= 0)
+        //    {
+        //        throw new Exception("用户未登录！");
+        //    }
+
+        //}
 
     }
 

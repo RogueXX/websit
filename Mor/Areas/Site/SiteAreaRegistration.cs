@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Mor.Areas.Site
+namespace Mor.Web.Areas.Site
 {
     public class SiteAreaRegistration : AreaRegistration
     {

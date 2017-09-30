@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Mor
+namespace Mor.Web
 {
     public class FilterConfig
     {

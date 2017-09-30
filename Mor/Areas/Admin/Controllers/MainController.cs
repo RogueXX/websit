@@ -7,7 +7,7 @@ using Mor.Common;
 using Mor.DataAccess;
 using Mor.Web;
 
-namespace Mor.Areas.Admin.Controllers
+namespace Mor.Web.Areas.Admin.Controllers
 {
     public class MainController : Controller
     {

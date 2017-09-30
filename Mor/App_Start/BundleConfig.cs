@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Mor
+namespace Mor.Web
 {
     public class BundleConfig
     {

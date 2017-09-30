@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Mor.Models.Site;
 using System.Text;
 using System.Net.Mail;
-using Mor.Areas.API.Models;
+using Mor.Web.Areas.API.Models;
 
-namespace Mor.Areas.API.Controllers
+namespace Mor.Web.Areas.API.Controllers
 {
     public class SiteController : Controller
     {

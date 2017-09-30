@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Mor.Areas.API
+namespace Mor.Web.Areas.API
 {
     public class APIAreaRegistration : AreaRegistration
     {
