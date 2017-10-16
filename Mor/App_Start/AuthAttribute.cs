@@ -33,13 +33,13 @@ namespace Mor.Web
 
             var token = filterContext.RequestContext.HttpContext.Request["token"];
 
-            if (UserEnvironment.UserInfo == null)
-            {
-                // 判断是否登录
-                var reurl = filterContext.RequestContext.HttpContext.Request.RawUrl;
-                reurl = filterContext.RequestContext.HttpContext.Server.UrlEncode(reurl);
-                filterContext.Result = new RedirectResult("/login?reurl=" + reurl);
-            }
+            //if (UserEnvironment.UserInfo == null)
+            //{
+            //    // 判断是否登录
+            //    var reurl = filterContext.RequestContext.HttpContext.Request.RawUrl;
+            //    reurl = filterContext.RequestContext.HttpContext.Server.UrlEncode(reurl);
+            //    filterContext.Result = new RedirectResult("/login?reurl=" + reurl);
+            //}
         }
 
 

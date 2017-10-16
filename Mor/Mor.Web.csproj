@@ -136,7 +136,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AgendasController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BannerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EventsController.cs" />
     <Compile Include="Areas\Admin\Controllers\MainController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SpeakersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SponsorsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TicketsController.cs" />
     <Compile Include="Areas\API\APIAreaRegistration.cs" />
     <Compile Include="Areas\API\Controllers\AdminController.cs" />
     <Compile Include="Areas\API\Controllers\Admin\BannerController.cs" />
@@ -1428,6 +1434,11 @@
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Main\Index.cshtml" />
     <Content Include="Areas\Site\Views\Index\TicketInfo.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Events\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Tickets\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Sponsors\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Agendas\Index.cshtml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\hangye.js" />
     <Content Include="Scripts\index.js" />
@@ -1558,7 +1569,9 @@
     <Content Include="static\picture\tb1ts5bqfxxxxcnxpxxxxxxxxxx-14-18.png" />
     <Content Include="static\picture\tb1vnykfwoqmejjy0fnxxb8gfxa-278-400.jpg" />
     <Content Include="static\picture\tb1vzhurpxxxxa2xfxxxxxxxxxx-944-532.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1611,7 +1624,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>5170</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:100/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

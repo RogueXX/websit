@@ -25,7 +25,7 @@
                 <span class="fa fa-bar"></span>
                 <span class="fa fa-bar"></span>
             </button>
-            <a class="navbar-brand" href="../adminlogin/index">O2O后台管理平台</a>
+            <a class="navbar-brand" href="#">Mor后台管理平台</a>
         </div>
         <nav class="collapse navbar-collapse" role="navigation">
             <div class="nav navbar-right navbar-nav">
@@ -36,7 +36,7 @@
             <ul class="nav navbar-nav">
 
                 <li class="active">
-                    <a href="../main/index">管理平台</a>
+                    <a href="../main/index">数据管理</a>
                 </li>
             </ul>
         </nav>
@@ -44,10 +44,12 @@
 
     @{
         var list = new List<object>();
-        list.Add(new { name = "商户管理", icon = "fa fa-wechat", url = "../Main/", id = "1" });
-        list.Add(new { name = "公众号管理", icon = "fa fa-wechat", url = "../Account/", id = "10" });
-        list.Add(new { name = "菜单权限管理", icon = "fa fa-lock", url = "../Privilege/", id = "2" });
-        list.Add(new { name = "菜单管理", icon = "fa fa-users", url = "../Menus/", id = "4" });
+        list.Add(new { name = "Banner管理", icon = "fa fa-wechat", url = "/Admin/Banner/", id = "1" });
+        list.Add(new { name = "演讲嘉宾管理", icon = "fa fa-wechat", url = "/Admin/Speakers/", id = "2" });
+        list.Add(new { name = "议程管理", icon = "fa fa-lock", url = "/Admin/Agendas/", id = "3" });
+        list.Add(new { name = "参会门票管理", icon = "fa fa-users", url = "/Admin/Tickets/", id = "4" });
+        list.Add(new { name = "创新活动管理", icon = "fa fa-users", url = "/Admin/Events/", id = "5" });
+        list.Add(new { name = "赞助商管理", icon = "fa fa-users", url = "/Admin/Sponsors/", id = "6" });
 
         <div id="sidebar-nav">
             <ul id="dashboard-menu">
@@ -81,7 +83,7 @@
     <hr>
     <footer>
         <p class="text-center">
-            <small>Copyright © 2015 - <a href="#" target="_blank">DAWSOFT</a> All Rights Reserved</small>
+            <small>Copyright © 2017 - <a href="#" target="_blank">Mor</a> All Rights Reserved</small>
         </p>
     </footer>
 

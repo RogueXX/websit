@@ -1,0 +1,330 @@
+  <center>
+    <table width='100%' align='center' id='bodyTable' border='0' cellspacing='0' cellpadding='0'>
+        <tbody>
+            <tr>
+                <td align='center' id='bodyCell' valign='top'>
+                    <table width='600' id='templateContainer' border='0' cellspacing='0' cellpadding='0'>
+                        <tbody>
+                            <tr>
+                                <td align='center' valign='top'>
+                                    <table width='600' id='templatePreheader' border='0' cellspacing='0' cellpadding='0'>
+                                        <tbody>
+                                            <tr>
+                                                <td class='preheaderContainer' valign='top' style='padding-top:9px;'>
+                                                    <table width='100%' class='mcnTextBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnTextBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnTextBlockInner' valign='top'>
+                                                                    <table width='366' align='left' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-left:18px; padding-bottom:0px; padding-right:0;'>
+                                                                                    <a href='https://mandrillapp.com/track/click/30141710/www.thegmic.cn?p=eyJzIjoiODVjZHNYb1hBOHFKNzRoM3BUVlhwam5VMnR3IiwidiI6MSwicCI6IntcInVcIjozMDE0MTcxMCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3LnRoZWdtaWMuY25cXFwvXCIsXCJpZFwiOlwiODM3NDE5NmVhMmMxNGE1NjkzNjY1OGJmNDBmYzI3NDRcIixcInVybF9pZHNcIjpbXCJiMjAwMGE3MTdhZjNjODBhZWQzMjIxYWY1N2FjYTIyNjUzZmZmNTU1XCJdfSJ9' target='_blank'><img width='44' height='14' style='width: 44px; height: 14px; border-width: 0px; border-style: solid;' src='http://cdnali.gwcevents.com/icons/top_logo_GMIC.png' border='0'></a>&nbsp; <span style='font-size:10px'>全球最有影响力的移动互联网行业盛会</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align='center' valign='top'>
+                                    <table width='600' id='templateHeader' border='0' cellspacing='0' cellpadding='0'>
+                                        <tbody>
+                                            <tr>
+                                                <td class='headerContainer' valign='top'>
+                                                    <table width='100%' class='mcnImageBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnImageBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnImageBlockInner' valign='top' style='padding:9px'>
+                                                                    <table width='100%' align='left' class='mcnImageContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class='mcnImageContent' valign='top' style='padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0;'>
+                                                                                    <img width='565' align='left' class='mcnImage' style='max-width:800px; padding-bottom: 0; display: inline !important; vertical-align: bottom;' src='http://cdnali.gwcevents.com/icons/beijing/banner-cn.jpg?v=1'>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align='center' valign='top'>
+                                    <table width='600' id='templateBody' border='0' cellspacing='0' cellpadding='0'>
+                                        <tbody>
+                                            <tr>
+                                                <td class='bodyContainer' valign='top'>
+                                                    <table width='100%' class='mcnTextBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnTextBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnTextBlockInner' valign='top'>
+                                                                    <table width='600' align='left' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;'>
+                                                                                    <table width='100%' align='center' border='0' cellspacing='0' cellpadding='0'>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td valign='top' style='color:#575757;font-size:14px;'>尊敬的 刘东岩,</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <table width='100%' align='center' border='0' cellspacing='0' cellpadding='0'>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td height='20'>&nbsp;</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <table width='100%' align='center' border='0' cellspacing='0' cellpadding='0'>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td valign='top' style='color:#575757;font-size:14px;'>
+                                                                                                    <span style='line-height:1.5'>感谢您注册MORKETING SUMMIT 2017全球移动营销峰会，本次大会将于<span style='border-bottom:1px dashed #ccc;' t='5' times=''>2017年11月29日-11月30日</span>在北京国贸大酒店举办。</span><br><br>                          <p style='font-weight:600'>MS2017全球移动营销峰会议程概要：</p><br />
+                                                                                                    <p>11月28日 19：00 VIP欢迎晚宴（邀请制）</p>
+                                                                                                    <p>11月29日 09：00 主会场1</p>
+                                                                                                    <p>11月29日 14：00 品牌专场、电商专场、出海专场</p>
+                                                                                                    <p>11月29日 19：00 MS2017全球移动营销盛典</p>
+                                                                                                    <p>11月30日 09：00 主会场2</p>
+                                                                                                    <p>11月30日 14：00 文娱专场、未来专场、手游专场</p> <br>
+                                                                                                    <span style='line-height:1.5'>请阅读以下注册确认函信息以及有关此次峰会的重要信息。</span><br>
+                                                                                                    <br>
+                                                                                                    <span>点击 <a style='color:#3258a8' href='http://ms2017.morketing.com/meeting/index.html' target='_blank'>这里</a> 了解更多关于MS2017的详细信息。 </span><br><br>
+                                                                                                    <span>如果您有任何疑问，欢迎联系我们： <a href='mailto:ms2017@morketing.com' target='_blank'>ms2017@morketing.com</a>&nbsp; 或者添加展会服务微信：Morketing。</span><br><br>
+                                                                                                    <span style='line-height:1.5'>以下是您的注册信息，此次峰会将使用如下二维码作为签到凭证，请惠存（若未显示二维码，请点击注册信息里的“下载”或者信任显示此邮件中的图片）。</span>
+                                                                                                    <p style='color:red'>峰会期间，请持两张本人名片（或身份证）及入场二维码到展会现场注册台领取胸卡。</p>
+                                                                                                    <span>期待在北京与您相遇！</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><table width='100%' class='mcnTextBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnTextBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnTextBlockInner' valign='top'>
+                                                                    <table width='366' align='left' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:0;'>
+                                                                                    <table width='100%' align='center' border='0' cellspacing='0' cellpadding='0'>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td height='25' valign='top' style='color:#575757;font-size:14px;font-weight:bold;'><strong>参会者信息</strong></td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <table width='100%' align='center' border='0' cellspacing='0' cellpadding='0'>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td height='30' style='color:#717171;font-size:14px;'>参会者姓名:</td>
+                                                                                                <td style='color:#717171;font-size:14px;'>刘东岩</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td height='22' style='color:#717171;font-size:14px;'>参会者邮箱:</td>
+                                                                                                <td style='color:#717171;font-size:14px;'><a href='mailto:liudy@dlsp.com.cn' target='_blank'>liudy@dlsp.c<wbr>om.cn</a></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td height='30' style='color:#717171;font-size:14px;'>门票类型:</td>
+                                                                                                <td style='color:#717171;font-size:14px;'>银牌门票</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td height='30' style='color:#717171;font-size:14px;'>注册状态:</td>
+                                                                                                <td style='color:#717171;font-size:14px;'>完成</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+
+                                                                    <table width='197' align='right' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-right:18px; padding-bottom:9px; padding-left:0;'>
+
+                                                                                    <div style='text-align:center'>
+                                                                                        <br>
+                                                                                        <img style='width:130px' src='http://beijing.gwcevents.com/zh-cn/Event/QR/?code=9BF8D878518C455EAEF29BE5A71D9747910428D249994410BC20A9BD'>
+                                                                                    </div>
+                                                                                    <div style='text-align:center'><a href='https://mandrillapp.com/track/click/30141710/beijing.gwcevents.com?p=eyJzIjoicGJaMmVkc1Y3T2xsd1VJVmJnTmc5RFBCa0hzIiwidiI6MSwicCI6IntcInVcIjozMDE0MTcxMCxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvYmVpamluZy5nd2NldmVudHMuY29tXFxcL3poLWNuXFxcL0V2ZW50XFxcL1FSXFxcLz9jb2RlPTlCRjhEODc4NTE4QzQ1NUVBRUYyOUJFNUE3MUQ5NzQ3OTEwNDI4RDI0OTk5NDQxMEJDMjBBOUJEXCIsXCJpZFwiOlwiODM3NDE5NmVhMmMxNGE1NjkzNjY1OGJmNDBmYzI3NDRcIixcInVybF9pZHNcIjpbXCI2YTA3MDg1MWIwM2I3YzRhM2VjOTBiZGExZjI0OTIzNDlkNTgyYmM0XCJdfSJ9' target='_blank'>下载</a></div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table width='100%' class='mcnTextBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnTextBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnTextBlockInner' valign='top'>
+                                                                    <table width='100%' align='left' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;'>
+                                                                                    <strong>订单信息</strong>
+                                                                                    <p></p>
+                                                                                    <div id='no-more-tables' style='border:1px solid #9A9A9A;margin:0; padding:5px;position:relative;margin-top:-1px;z-index:1' width='100%'>
+                                                                                        <table width='100%' align='center' border='0' cellspacing='0' cellpadding='0' display='block'>
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th align='left' style='color: #474747;padding: 10px;font-size: 12px;background: #CCCCCC;'>票务类型</th>
+                                                                                                    <th align='left' style='color: #474747;padding: 10px;font-size: 12px;background: #CCCCCC;'>数量</th>
+                                                                                                    <th align='left' style='color: #474747;padding: 10px;font-size: 12px;background: #CCCCCC;'>实付金额</th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class='special' style='padding-top:5px; padding-bottom: 10px;background:#eee;color:#474747;font-size:12px' data-title='票务类型'>
+                                                                                                        银牌门票
+                                                                                                        <span style='color:#FF0000'>(GMICBJ3ACAD5BB)</span>
+                                                                                                    </td>
+                                                                                                    <td class='special' style='padding-top:5px;padding-bottom: 10px;background:#eee;color:#474747;font-size:12px' data-title='数量'>1</td>
+                                                                                                    <td class='special' style='padding-top:5px;padding-bottom: 10px;background:#eee;color:#474747;font-size:12px' data-title='实付金额'>￥0.00</td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table width='100%' class='mcnDividerBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnDividerBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnDividerBlockInner' style='padding: 20px;'>
+                                                                    <table width='100%' class='mcnDividerContent' style='border-top-width: 1px;border-top-style: solid;border-top-color: #999999;' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <span></span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align='center' valign='top'>
+                                    <table width='600' id='templateFooter' border='0' cellspacing='0' cellpadding='0'>
+                                        <tbody>
+                                            <tr>
+                                                <td class='footerContainer' valign='top' style='padding-bottom:9px;'>
+                                                    <table width='100%' class='mcnTextBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnTextBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnTextBlockInner' valign='top'>
+                                                                    <table width='600' align='left' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;'>
+                                                                                    <span style='font-size:14px; line-height:2.5'><strong>主办方：</strong></span>
+                                                                                    <br style='font-size: 14px; line-height: 20.7999992370605px;'>
+                                                                                    <span style='font-size:14px'>
+                                                                                        <img width='45' height='14' style='width: 45px; height: 14px; border-width: 0px; border-style: solid;' src='http://cdnali.gwcevents.com/icons/gwc.png' border='0'>&nbsp;
+                                                                                        <span style='line-height:1.5'>长城会致力于打造最具影响力的全球创新者平台；我们的使命是：让连接无边无界，让创新无所不能，让价值无处不在。</span>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><table width='100%' class='mcnTextBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnTextBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnTextBlockInner' valign='top'>
+                                                                    <table width='282' align='left' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:0;'>
+                                                                                    <span style='font-size:14px; line-height:2.5'><strong>联系我们：</strong></span>
+                                                                                    <br style='font-size: 14px; line-height: 20.7999992370605px;'>
+                                                                                    <span style='font-size:14px; line-height:2'>电 &nbsp; 话：<span style='border-bottom:1px dashed #ccc;z-index:1' t='7' onclick='return false;' data='+86-10-82525377'>+86-10-58208580</span></span><br>
+                                                                                    <span style='font-size:14px; line-height:2'>邮 &nbsp; 箱：<a href='mailto:ms2017@morketing.com' target='_blank'>ms2017@morketing.com</a></span><br>
+                                                                                    <span style='font-size:14px; line-height:2'>官 &nbsp; 网：<a href='http://ms2017.morketing.com' target='_blank'>ms2017.morketing.com</a></span><br>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <table width='200' align='right' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-right:18px; padding-bottom:9px; padding-left:0;'>
+                                                                                    <img width='160' tabindex='0' class='CToWUd a6T' style='vertical-align:bottom;max-width:180px;max-height:176.51612903225808px;width:130px;padding:0px 10px 10px 10px' src='http://cdnali.gwcevents.com/icons/qrcode-gwc.jpg'>
+
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><table width='100%' class='mcnTextBlock' border='0' cellspacing='0' cellpadding='0'>
+                                                        <tbody class='mcnTextBlockOuter'>
+                                                            <tr>
+                                                                <td class='mcnTextBlockInner' valign='top'>
+                                                                    <table width='600' align='left' class='mcnTextContentContainer' border='0' cellspacing='0' cellpadding='0'>
+                                                                        <tbody>
+                                                                            <tr> 
+                                                                                <td class='mcnTextContent' valign='top' style='padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;'>
+                                                                                    <em style='font-size:12px; line-height:20.7999992370605px'>Copyright@Morketing 2017，All rights reserved.</em>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table> 
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+    </center>

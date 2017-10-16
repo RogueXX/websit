@@ -2,25 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc; 
-using Mor.Common;
-using Mor.DataAccess;
-using Mor.Web;
+using System.Web.Mvc;
 
 namespace Mor.Web.Areas.Admin.Controllers
 {
-    public class MainController : Controller
+    public class EventsController : Controller
     {
         //
-        // GET: /Admin/Main/
+        // GET: /Admin/Events/
 
-        [Auth]
+       [Auth]
         public ActionResult Index()
         {
             return View();
         }
-
-
 
     }
 }
